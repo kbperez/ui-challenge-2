@@ -5,6 +5,8 @@
     <title>UI Challenge 2</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="valid.css">
+    <link src="form-elements-sprite.png">
   </head>
 
   <body>
@@ -12,9 +14,10 @@
       <main>
 
         <header>
+        <label for="text_input">text input</label>
         <form>
-          text input<br>
-          <input type="text" name="text_input" placeholder="placeholder text"  size="50" required><br>
+          <input type="text" id="text_input" name="text_input" placeholder="placeholder text"  size="50" required oninvalid="this.setCustomValidity('Enter User Name Here')"
+          oninput="setCustomValidity('')"  />
         </form>
       </header>
 
